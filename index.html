@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.boxbox {
+            width: 300px;
+            background-color: lightgray;
+            border: 15px solid blue;
+            padding: 30px;
+            margin: 20px;
+        }
+        span.a {
+            display: inline;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: yellow;
+        }
+        span.b {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: yellow;
+        }
+        span.c {
+            display: block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 2px solid blue;
+            background-color: yellow;
+        }
+        div.box {
+            width: 70px;
+            height: 70px;
+            background-color: lightgray;
+            border: 12px solid rgb(0, 183, 255);
+            display: inline-block;
+        }
+        #box1 {
+            position: static;
+        }
+        #box2 {
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+        #box3 {
+            position: absolute;
+        }
+        #box4 {
+            position: fixed;
+            top: 10px;
+        }
+        div.flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: DodgerBlue;
+            justify-content: space-between;
+        }
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Box Model</h2>
+    <div class="boxbox">
+        Web development involves building and maintaining websites or web applications. It includes frontend development, which focuses on user interface and experience, and backend development, which manages server-side logic, databases, and APIs. Full stack developers handle both frontend and backend tasks.
+    </div>
+
+    <h2>Display Types</h2>
+
+    <h3>Display: inline</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, exercitationem. Maiores expedita fugit unde autem <span class="a">molestias</span> <span class="a">optio</span>optio non. Laboriosam ullam voluptate unde?</p>
+
+    <h3>Display: inline-block</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae libero quisquam quia cumque consectetur fugiat. Molestiae doloremque perspiciatis sint a! Maiores expedita fugit unde autem <span class="b">molestias</span> <span class="b">optio</span>optio non. Laboriosam ullam voluptate unde?</p>
+
+    <h3>Display: block</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita fugit unde autem <span class="c">molestias</span> <span class="c">optio</span>optio non. Laboriosam ullam voluptate unde?</p>
+
+    <h2>position</h2>
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+    <div class="box" id="box3">box3</div>
+    <div class="box" id="box4">box4</div>
+    <br><br><br><br>
+
+    <div class="flex-container">
+        <div style="order: 2; flex-grow: 2">1</div>
+        <div style="order: 1; flex-shrink: 0">2</div>
+        <div style="order: 3; flex-basis: 200px">3</div>
+        <div style="order: 4">4</div>
+    </div>
+</body>
+</html>
